@@ -111,7 +111,7 @@ export default function Home() {
         // if person
         let person: boolean = false;
         predictions.forEach(prediction => {
-          person = prediction.class === 'person'
+          person = prediction.class === 'person' && prediction.score > 0.40
         });
         if (person) {
           startRecording();
@@ -126,7 +126,7 @@ export default function Home() {
   // 4. with a interval
   setInterval(() => {
     runPredictions();
-  }, 100);
+  }, 300);
 
   // 5. display
   return (
