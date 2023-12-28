@@ -126,7 +126,7 @@ export default function Home() {
   // 4. with a interval
   setInterval(() => {
     runPredictions();
-  }, 300);
+  }, 100);
 
   // 5. display
   return (
